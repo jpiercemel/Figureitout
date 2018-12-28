@@ -5,11 +5,15 @@ December 28, 2018.  Westhill Schools John Pierce'''
 def figure_it_out():
     wordy = str(raw_input ('Enter a word to guess letters:    '))
     guess = str(raw_input ('Guess the letters in the secrect word.'))
+    score = 0
     for letter in wordy:
         if letter in guess:
-                print (letter, end="") 
+            score += 1
+            print (letter, end="") 
+            
         else:
             if letter == " ":
-                    print(" ",end="")
+                print(" ",end="")
             else:
-                    print ("-",end="")
+                print ("-",end="")
+    print ('Your score is ', score, ' !')
